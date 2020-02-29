@@ -1,0 +1,80 @@
+git config --global user.name "Nome do Usuário"
+git config --global user.email "seu_emaill@gmail.com"
+git config --global core.editor notepad++
+git config user.name
+git config user.email
+git config --list
+mkdir git-course
+git init #inicializa o repositorio git
+ls -la
+git add Readme.md #após comando arquivo está pronto para commit
+git status
+git commit -m "Add Readme.md"
+git log
+git log --decorate
+git log --author="Sou"
+git shortlog
+git shortlog -sn
+git log --graph
+git show 039f917bd2eac2dd7f432ad09a5318a4d87f4913 #Isso é a hash do commit
+git diff #verifica diferenças no arquivo
+git diff --name-only #verifica somente os arquivos com alterações
+git commit -am "edit readme" #realiza o commit direto
+git checkout Readme.md #Volta o último commit da HEAD/branch
+git reset HEAD Readme.md #Volta do arquivo após commit errado
+git checkout Readme.md #Se deseja eliminar o que foi comitado, executa este comando para pegar o último commit aceito.
+git reset --soft #Pega as modificações e mata o commit das modificações. Ele recebe o hash do commit
+git reset --mixed #Mata o commit e volta o arquivo antes do unstage. Ele recebe o hash do commit
+git reset --hard # Ignorar tudo que foi feito do commit. Ele recebe o hash do commit
+=================================//===============================================
+Criar chave SSH no github
+Execute este comando ssh-keygen -t rsa -b 4096 -C "itimes.digital@gmail.com"
+Pega a chave neste arquivo ~/.ssh/id_rsa.pub
+Depois linka na conta do github
+Faça a ligação com o repositório local (estudo-git.git) com o remoto, os nomes precisam ser iguais: git remote add origin https://github.com/itimes-digital/estudo-git.git
+git remote
+git remote -v
+git push -u origin master #Pode ser master ou o nome da branch
+====================================//==============================================
+git push origin master #commit remoto para a master
+git clone git@github.com:itimes-digital/estudo-git.git estudo-git-clone
+====================================//===============================================
+git checkout -b testing #Criando branch
+git branch #listando os nomes das branchs
+git checkout master #baixando branch ou trocando de branch
+git branch -D testing #Deletando uma branch
+git merge test #Realiza o merge com a branch desejada (destino (master) é onde vc está e a origem (branch) é onde especificado na linha, no caso, a branch test)
+git log --graph #Verifica a estrutura da master, branchs e históricos
+git checkout -b rebase-branch #Criando branch
+git add bla #adiciona arquivo antes do commit
+git rebase rebase-branch #Realiza o rebase com a branch desejada (destino (master) é onde vc está e a origem (branch) é onde especificado na linha, no caso, a branch rebase-branch)
+Dentro do vim ou vi pode usar o comando :wq para salvar e sair
+Dentro do vim ou vi pode usar comando :q para sair
+Dentro do vim ou vi pode usar a tecla i para habilitar a edição e a tecla esc para sair da edição
+No console do git bash pode usar a tecla q para exibir o ponteiro.
+vi .gitignore #Criar arquivo para ignorar tipos de arquivos de um projeto. 
+============================================//===========================================
+vim Readme.md #Abre o arquivo e altere-o
+git stash #Saved working directory and index state WIP on master: 69f6849 Add new text
+git checkout -b bla #Uma branch qualquer
+git stash apply #Aplica o conteúdo salvo em outra branch
+git diff #Verificar as diferenças de arquivos salvo pelo stash
+git stash list
+git stash clear
+git config --global alias.s status #Criar um alias para comandos git, no caso, poderá ser chamado apenas por git s
+====================================//============================================
+vim README.md #Faça uma alteração
+git add README.md
+git commit -m "add new line"
+git log #Pega o hash do commit que está dando problema
+git show # analisa o que tem de alteração neste commit
+git revert 39a1956e4858e2a3463641c13f0424e5f672273d #Revert o commit que está dando problema com o valor hash do commit, assim não perde o histórico de commit
+===================================//==============================================
+git push origin :1.0.0 #Para deletar remoto tag ou branch
+git tag -d 1.0.0 #Para deletar local
+
+
+
+
+
+
