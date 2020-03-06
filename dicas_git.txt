@@ -35,6 +35,15 @@ Faça a ligação com o repositório local (estudo-git.git) com o remoto, os nom
 git remote
 git remote -v
 git push -u origin master #Pode ser master ou o nome da branch
+
+***Criar repositório remotamente:***
+-	echo "# nome-da-pasta" >> README.md
+-	git init
+-	git add README.md
+-	git commit -m "first commit"
+-	git remote add origin https://github.com/itimes-digital/estudo-java.git
+-	git push -u origin master
+
 ====================================//==============================================
 git push origin master #commit remoto para a master
 git clone git@github.com:itimes-digital/estudo-git.git estudo-git-clone
